@@ -1,0 +1,69 @@
+body{
+  background: rgb(231, 231, 231)
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+nav{
+  width:100%;
+  background: black;
+  overflow: auto;
+  position: fixed;
+  top:0;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li{
+  float: left;
+}
+a{
+  padding: 20px;
+  width: 100px;
+  display: block;
+  text-decoration: none;
+  color:white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#home{
+  height:100px;
+  display: inline-block;
+  width: 100%;
+}
+#schedule{
+  height: 200px;
+  display: inline-block;
+  width: 100%;
+}
+#evidence{
+  height: 1200px;
+  display: inline-block;
+  width: 100%;
+}
+h1{
+  margin: 100px;
+  text-align: left;
+  padding-top: 10px;
+}
+p{
+  margin: 100px;
+  text-align: left;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+th {
+  text-align: left;
+}
