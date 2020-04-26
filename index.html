@@ -2,76 +2,119 @@
 
 <html>
 
-	<head>
-    <meta charset="uts-8" />
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>HBL20</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	
-	<body>
-    <nav>
-      <ul>
-        <li><a href ="#home">Home</a></li>
-        <li><a href ="#schedule">Schedule</a></li>
-        <li><a href ="#evidence">Evidence</a></li>
+<head>
+	<meta charset="uts-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HBL20</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="collapsible.js">
+	</script>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#schedule">Schedule</a></li>
+			<li><a href="#evidence">Evidence</a></li>
 
 
-      </ul>
-    </nav>
+		</ul>
+	</nav>
 
-    <div id ="home">
-    <h1> HBL 2020</h1>
-    <p>Work for HBL 2020</p>
+	<div id="home">
+		<h1> HBL 2020</h1>
+		<p>Work for HBL 2020</p>
+	</div>
+	<div id="schedule">
+		<h1> Schedule for HBL</h1>
+	</div>
+
+	<table style="width:100%">
+		<tr>
+			<th>Week</th>
+			<th>Scheduled tasks</th>
+			<th>Finished (Y/N)</th>
+		</tr>
+		<tr>
+			<td>T2W5</td>
+			<td>Majulah GCP, data sorting</td>
+			<td>Y</td>
+		</tr>
+		<tr>
+			<td>T2W6</td>
+			<td>Datacamp, CS50</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Holidays</td>
+			<td>Javascript</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>T3W1</td>
+			<td>tbc</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>T3W2</td>
+			<td>tbc</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>T3W3</td>
+			<td>tbc</td>
+			<td></td>
+		</tr>
+	</table>
+	<div id="evidence">
+		<h1> Evidence</h1>
+	</div>
+
+	<button type="button" class="collapsible">T2W5</button>
+    <div class="content">
+      <img src="26-4 gcp.png" alt="MajulahGCP 26/4">
     </div>
-    <div id ="schedule">
-    <h1> Schedule for HBL</h1>
+    <button type="button" class="collapsible">T2W6</button>
+    <div class="content">
+      <p>Nil</p>
     </div>
-
-    <table style="width:100%">
-  <tr>
-    <th>Week</th>
-    <th>Scheduled tasks</th>
-    <th>Finished (Y/N)</th>
-  </tr>
-  <tr>
-    <td>T2W5</td>
-    <td>Majulah GCP, data sorting</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>T2W6</td>
-    <td>Datacamp, CS50</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Holidays</td>
-    <td>Javascript</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>T3W1</td>
-    <td>tbc</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>T3W2</td>
-    <td>tbc</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>T3W3</td>
-    <td>tbc</td>
-    <td></td>
-  </tr>
-</table>
-    <div id ="evidence">
-    <h1> Evidence</h1>
+    <button type="button" class="collapsible">Holiday</button>
+    <div class="content">
+      <p>Nil</p>
     </div>
+    <button type="button" class="collapsible">T3W1</button>
+    <div class="content">
+      <p>Nil</p>
+    </div>
+    <button type="button" class="collapsible">T3W2</button>
+    <div class="content">
+      <p>Nil</p>
+    </div>
+    <button type="button" class="collapsible">T3W3</button>
+    <div class="content">
+      <p>Nil</p>
 
-	
-	</body>
+  </body>
 
 
 
 </html>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
