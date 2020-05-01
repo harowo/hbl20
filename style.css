@@ -24,7 +24,7 @@ ul{
 li{
   float: left;
 }
-a1{
+a.one{
   padding: 20px;
   width: 100px;
   display: block;
@@ -32,6 +32,7 @@ a1{
   color:white;
   text-transform: uppercase;
   font-weight: bold;
+  hover {font-size:150%;}
 }
 #home{
   height:100px;
